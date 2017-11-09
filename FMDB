@@ -192,3 +192,79 @@ t_student 表中，若没有设置一个字段为主键，则难免会出现几�
 左外连接：left outer join （保证左表数据的完整性）
 
 示例：查询网络工程2班的所有学生select s.name,s.age from t_student s, t_class c where s.class_id = c.id and c.name = '网络工程2班';
+
+---
+
+iOS开发 数据缓存－FMDB的使用(2)
+字数1044 阅读2697 评论5 喜欢13
+1.SQLite3的使用
+要使用SQLite3，先要添加库文件 libsqlite3.dylib 。
+
+QQ20150823-1.png
+导入头文件import<sqlite3.h>那么到这里FMDB的准备工作已经就绪了，接下来我们看一下FMDB的使用方法 
+
+2.FMDB的介绍
+FMDB是iOS平台的SQLite数据库框架，以OC的方式封装了SQLite的C语言API，使用起来比单纯调用SQLite语句方便
+FMDB使用起来更加面向对象，省去了很多麻烦、冗余的C语言代码
+对比苹果自带的Core Data框架，更加轻量级和灵活
+提供了多线程安全的数据库操作方法，有效地防止数据混乱
+下载地址：[FMDB的github](https://github.com/ccgus/fmdb)import "FMDB.h"
+
+3.核心三大类
+FMDatabase(创建、删除)
+一个FMDatabase对象就代表一个单独的SQLite数据库
+用来执行SQL语句
+
+FMResultSet(用来查询)
+使用FMDatabase执行查询后的结果集
+
+FMDatabaseQueue
+用于在多线程中执行多个查询或更新，它是线程安全的
+
+4.使用步骤
+(1) 打开数据库
+通过指定SQLite数据库文件路径来创建FMDatabase对象FMDatabase *db = [FMDatabase databaseWithPath:path];if ([db open]) {// 数据库打开成功}
+示例// 1.获得数据库文件的路径NSString *doc =[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];// 2.拼接文件名NSString *filename = [doc stringByAppendingPathComponent:@"status.sqlite"];// 3.得到数据库_db = [FMDatabase databaseWithPath:filename];// 4.打开数据库if ([_db open]) {// 5.创表BOOL result = [_db executeUpdate:@"CREATE TABLE IF NOT EXISTS t_home_status (id integer PRIMARY KEY AUTOINCREMENT, access_token text NOT NULL, status_idstr text NOT NULL, status_dict blob NOT NULL);"];if (result) {NSLog(@"成功创表");} else {NSLog(@"创表失败");}3.文件路径的三种情况(1)具体文件路径
+
+- 如果不存在会自动创建
+
+(2)空字符串@""（不推荐）
+
+- 会在临时目录创建一个空的数据库
+
+- 当FMDatabase连接关闭时，数据库文件也被删除
+
+(3)nil
+
+- 会创建一个内存中的临时文件，当FMDatabase连接关闭时，数据库也会被销毁
+(2)执行更新
+CREATE,DROP,INSERT,UPDATE,DELETE等除了查询以外的操作，都称为更新操作
+使用executeUpdate:方法做更新操作
+-(BOOL)executeUpdate:(NSString*)sql, ...
+-(BOOL)executeUpdateWithFormat:(NSString*)format, ...
+-(BOOL)executeUpdate:(NSString)sql withArgumentsInArray:(NSArray )arguments
+在SQL字符串中写SQL语句
+
+示例[db executeUpdate:@"UPDATE t_student_classtwo SET age = ? WHERE name = ?;", @"21", @"Kingsly"]
+
+(3) 执行查询
+执行数据库查询的方法:(查询使用FMResultSet对象)
+-(FMResultSet )executeQuery:(NSString )sql, ...
+-(FMResultSet )executeQueryWithFormat:(NSString)format, ...
+
+-(FMResultSet )executeQuery:(NSString )sql withArgumentsInArray:(NSArray *)arguments
+用 FMResultSet 对象的 next 方法来遍历查询到的数据
+
+示例// 查询数据FMResultSet *rs = [db executeQuery:@"SELECT * FROM t_student_classtwo"];// 遍历结果集while ([rs next]) {NSString *name = [rs stringForColumn:@"name"];int age = [rs intForColumn:@"age"];double score = [rs doubleForColumn:@"score"];}
+
+FMDatabaseQueue的使用
+为什么使用FMDatabaseQueue
+FMDatabase这个类是线程不安全的，如果在多个线程中同时使用一个FMDatabase实例，会造成数据混乱等问题。
+
+![](http://upload-images.jianshu.io/upload_images/1336268-995fd7d86640744b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+图中对象A和对象B同时修改银行数据库中Money的余额，A在原来的基础上加200，B在原来的基础上加500，这样会发生冲突，会把相互修改的覆盖，这样无缘无故少了几百块钱，银行规定多出来的钱才是跟银行有关、钱少了是不负责任的。所以这样是线程不安全的，会出问题。
+为了保证线程安全，FMDB提供方便快捷的FMDatabaseQueue类
+示例FMDatabaseQueue *queue = [FMDatabaseQueue databaseQueueWithPath:path];
+简单使用[queue inDatabase:^(FMDatabase *db) {[db executeUpdate:@"INSERT INTO t_student(name) VALUES (?)", @"Jack"];[db executeUpdate:@"INSERT INTO t_student(name) VALUES (?)", @"Rose"];[db executeUpdate:@"INSERT INTO t_student(name) VALUES (?)", @"Jim"];FMResultSet *rs = [db executeQuery:@"select * from t_student"];while ([rs next]) {// …}}];
+开启事务:事务对于数据库的作用是对数据的一系列操作，要么全部成功，要么全部失败，防止中间状态的出现，以确保数据库中的数据始终处于正确及和谐状态。[self.queue inDatabase:^(FMDatabase *db) {// 开启事务[db beginTransaction];BOOL result = [db executeUpdate:@"update t_student set age = 20 where id >= 20; "];if (result) {NSLog(@"修改成功");}else{NSLog(@"修改失败");}// 提交事务[db commit];}];
+
