@@ -153,7 +153,7 @@
 
 ## 编程实现
 
-*简述[「Snakes and Ladders」]([http://en.wikipedia.org/wiki/Snakes_and_Ladders](http://en.wikipedia.org/wiki/Snakes_and_Ladders))的实现思路(这道题比较容易阐述清楚，且难度适中)
+* 简述[「Snakes and Ladders」]([http://en.wikipedia.org/wiki/Snakes_and_Ladders](http://en.wikipedia.org/wiki/Snakes_and_Ladders))的实现思路(这道题比较容易阐述清楚，且难度适中)
 
 ## 参考
 
