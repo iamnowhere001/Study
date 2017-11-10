@@ -1,0 +1,605 @@
+![](http://upload-images.jianshu.io/upload_images/1336268-bc8ca1595fa56686.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+人所缺乏的不是才干而是志向，不是成功的能力而是勤劳的意志。
+
+[Xcode快捷键 及代码格式化](http://www.cnblogs.com/jys509/p/4358950.html)
+2015-03-23 09:45 by jiangys, 2977 阅读, 0 评论, [收藏](http://www.cnblogs.com/jys509/p/4358950.html#),  [编辑](http://i.cnblogs.com/EditPosts.aspx?postid=4358950)
+按住apple键点击类名就可以定位到这个类中查看相关定义（在日后的开发中我们会经常这么来做，毕竟要记住iOS开发中所有的API是不现实的，有些API我们可以通过这种方法来查找）
+
+ 
+
+PS：下面都是网上百度后经过我自己整理，都是Xcode比较常用的快捷键，特别是红色标注的，很常用。用熟了开发编辑代码的的时候就很方便，希望对大家有用~
+1. 文件
+CMD + N: 新文件
+CMD + SHIFT + N: 新项目
+CMD + O: 打开
+CMD + S: 保存
+CMD+OPt+S：保存所有文件
+CMD + SHIFT + S: 另存为
+CMD + W: 关闭窗口
+CMD + Q :退出Xcode
+CMD + SHIFT + W: 关闭文件
+
+2. 编辑
+CMD + [: 左缩进
+CMD + ]: 右缩进
+
+CMD+shift+F:项目中查找
+CMD+G:查找下一个
+CMD+shift+G:查找上一个
+
+Ctrl + F ：前移光标
+Ctrl + B ：后移光标
+Ctrl + P ：移动光标到上一行
+Ctrl + N：移动光标到下一行
+Ctrl + A : 移动光标到本行行首   （替换Home键）
+Ctrl + E : 移动光标到本行行尾   （替换end键）
+Ctrl + T ：交换光标左右两边的字符
+Ctrl + D：删除光标右边的字符
+Ctrl + L : 将插入点置于窗口正中
+Ctrl + K ：删除本行
+Ctrl + .  : 参数提示
+Tab ：接受代码提示
+Esc ：显示代码提示菜单
+CMD + /: 注释或取消注释
+
+CMD + CTRL + LEFT: 折叠
+CMD + CTRL + RIGHT: 取消折叠
+CMD + CTRL + TOP: 折叠全部函数
+CMD + CTRL + BOTTOM: 取消全部函数折叠
+CTRL + U: 取消全部折叠
+
+CMD + D: 添加书签
+
+3. 调试
+CMD + \: 设置或取消断点
+CMD + OPT + \: 允许或禁用当前断点
+CMD + OPT + B: 查看全部断点
+
+CMD + RETURN: 编译并运行（根据设置决定是否启用断点）
+CMD + R: 编译并运行（不触发断点）
+CMD + Y: 编译并调试（触发断点）
+CMD + SHIFT + RETURN: 终止运行或调试
+CMD + Alt + P ： 继续（在调试中）
+CMD + Alt + 0 ：跳过
+CMD + Alt + I ：跳入
+CMD + Alt + T ：跳出
+
+CMD + B: 编译
+CMD + SHIFT + K: 清理
+
+4. 窗体
+CMD + SHIFT + B: 编译窗口
+CMD + SHIFT + Y: 调试代码窗口
+CMD + SHIFT + R: 调试控制台
+CMD + SHIFT + E: 主编辑窗口调整
+
+5. 帮助
+CMD + OPT + ?: 开发手册
+CMD + CTRL + ?: 快速帮助
+
+6、Xcode6 代码格式化/自动排版：
+             选中需要格式化代码 -> Editor -> Structure ->Re-Indent 或者
+             选中需要格式化代码 -> 右击 ->选中 Structure ->Re-Indent
+
+　　　　快捷键：Ctrl+a全选->ctrl ＋ i 格式化
+
+http://www.tdpress.com/zyzx/tsscflwj
+深入浅出 Objective-C
+
+ctrl + enter 强制换行
+Command + space 输入法的切换
+control+c 强制停止程序运行
+command + R 运行程序
+command+a全选 ctrl+i自动进行格式化
+
+shift + command + H 模拟器返回首页
+command + L 模拟器锁屏
+
+step over:执行下行码。
+step info:进入到方法里面
+step out:跳出当前方法，即执行到当前方法的末尾。
+continue:继续执行当前代码，如果有下个断点，则到下一断点。
+
+　　新建项目 command+shift+n　　新建文件 command+n　　新建空文件 command+control+n
+
+　　打开 command+o　　关闭窗口 command+w　　保存所有文件 command+option+s
+
+　　还原到保存时状态 command+u　　创建快照 command+control+s (保存文件快照，以后可进行对比修改情况)　　左缩进 command+[　　右缩进 command+]　　项目中查找 command+shift+F　　查找下一个 command+g　　查找上一个 command+shift+g　　用选择的查找 command+e　　go to line command+l　　下一个填充 control+.　　填充列表 option+esc　　显示拼写和语法 command+shift+;　　检查拼写 command+;　　打开头文件 command+shift+d　　切换头/源文件 command+option+上箭头
+　　类浏览 command+shift+c　　Bulid and Run 断点关 command+r　　Build and Debug 断点开 command+y　　下个Build警告或错误 command+=
+　　前个Build警告或错误 command+shift+=
+
+　　注释 command+/　　文件首行 command+上箭头
+　　文件末 command+下箭头
+　　行首 command+左箭头
+　　行末 command+右箭头
+　　上一单词 option+左箭头
+　　下一单词 option+右箭头
+　　中间显示光标位置 control+l　　方法组列表 control+2　　删除此行光标前所有内容 control+delete　　断点 command+option+b　　当前行插入断点 command+\　　Pause command+option+p　　Step Into command+shift+i　　Step Into Instruction command+option+shift+i　　Step Over command+shift+o　　Setp Over Instruction command+option+shift+o　　Setp Out command+shift+t　　查开发文档 
+command+option+click
+
+　　偏好设置 command+,
+　　隐藏xcode command+h　　隐藏其它 command+option+h　　显示全部 可设
+
+　　在新窗口中打开 command+option+o　　快速打开 command+shift+d / command+shift+alt+d (不知区别是什么)　　
+　　Get Info command+i　　显示检查器? command+option+i (效果和Get Info一样，不知区别)　　关闭窗口 command+w　　关闭所有窗口 command+option+w　　关闭当前项目 command+control+w　　关闭当前文件 command+shift+w　　保存文件 command+s　　保存所有文件 command+option+s　　另存为 command+shift+s　　复本另存为 command+option+shift+s　　还原到保存时状态 command+u　　创建快照 command+control+s (保存文件快照，以后可进行对比修改情况)　　显示快照 可设 (File->Snapshots)　　打印 command+p
+
+　　编辑相关：
+　　
+　　复制(Duplicate) 可设
+　　重构 command+shift+j (选中方法名)
+　　转换为objc2.0 可设
+
+　　=================字体====================　　显示字体 command+t
+　　
+　　复制样式 command+option+c　　粘贴样式 command+option+v
+
+　　=================文本====================　　左对齐 command+{　　右对齐 command+}　　居中 command+竖线 (不知竖线是哪个，没试出)　　Justify 可设(功能未知)　　左缩进 command+[　　右缩进 command+]　　Show Ruler 可设(功能未知)　　Copy Ruler command+control+c　　Paste Ruler command+control+v　　Balance 可设 (第一次，选中语句，第二次，选中方法体)　　重置缩进 可设
+
+　　=================查找====================　　项目中查找 command+shift+F　　在项目中查找选定文本 可设
+　　查找 可设
+　　查找替换 command+control+f　　查找选定文本 可设
+　　查找下一个 command+g　　查找上一个 command+shift+g　　隐藏查找栏 可设
+　　替换 可设
+　　替换全部 可设
+　　替换并查找下一个 可设
+　　替换并查找上一个 可设
+　　用选择的查找 command+e　　用选择的替换 command+control+e　　跳到光标处 command+j　　跳到定义 可设
+　　
+　　添加书签 command+d　　go to line command+l　　下一个填充 control+.　　填充列表 option+esc　　下一个占位符 control+/ (和tab相同)　　Edit All in Scope command+control+t (功能未知)
+
+　　=================拼写====================　　显示拼写和语法 command+shift+;　　检查拼写 command+;　　输入时检查拼写 可设
+　　特殊符号 command+option+t　　视图相关：
+　　右上角详情搜索 command+option+f　　缩放编辑窗口 command+shift+e　　缩放编辑窗口满屏 command+option+shift+e　　折叠 command+control+左箭头
+　　屏开 command+control+右箭头
+　　屏开所有 control+u　　折叠方法 command+control+上箭头
+　　展开方法 command+control+下箭头
+　　折叠注释块 command+control+shift+上箭头
+　　展开注释块 command+control+shift+下箭头
+　　焦点跟随 command+option+control+f
+
+　　
+　　显示控制字符 command+shift+6
+　　
+　　前进 command+option+右箭头
+　　下一文件 command+option+shift+右箭头
+　　返回 command+option+左箭头
+　　上一文件 command+option+shift+左箭头
+　　切换头/源文件 command+option+上箭头
+　　组树中定位 command+option+shift+上箭头
+　　显示工具栏 可设
+　　自定义工具栏 可设
+
+　　===================项目====================　　项目中标签切换 command+数字0　　类浏览 command+shift+c　　重命名项目 可设
+　　新组 command+option+n　　分组 command+option+g　　撤销分组 command+option+shift+g　　新建智能组 可设
+　　添加项目 command+option+a　　添加文件到项目 可设
+　　新Target 可设
+　　升级所有Targets 可设
+　　升级当前Target到ipad 可设
+
+　　编辑当前Target command+option+e　　编辑当前可执行文件 command+option+x
+
+　　==============代码导航及编辑================
+　　注释 command+/　　文件首行 command+上箭头
+　　文件末 command+下箭头
+　　行首 command+左箭头
+　　行末 command+右箭头
+　　上一单词 option+左箭头
+　　下一单词 option+右箭头
+　　上一拆分单词 control+左箭头
+　　下一拆分单词 control+右箭头
+　　中间显示光标位置 control+l　　方法组列表 control+2　　删除前一单词 option+delete　　删除此行光标前所有内容 control+delete　　跨行选取 command+option+鼠标拖动
+
+　　Run相关：
+　　Debug command+option+enter　　Run 断点关 command+option+r　　Debug 断点开 command+option+y　　Run with Performance Tool (Shark) 可设
+　　Stop command+shift+enter　　Attach to Process (Process ID) 可设
+　　Debugger command+option+y　　Mini Debugger command+control+左斜上箭头(不知咋按)　　Console command+shift+r　　Clear Console command+option+control+r
+
+　　断点 command+option+b
+
+　　==================================
+　　停用断点 command+control+\　　停止objc例外 可设
+　　================Manage Brakpoints=================　　当前行插入断点 command+\　　Add Symbolic Breakpoint 可设
+　　Add C++ Exception Breakpoint 可设
+　　启用当前行断点 command+option+\　　导入断点 可设
+　　导出断点 可设
+
+　　=============================
+　　Fix 可设
+　　Pause command+option+p　　Step Into command+shift+i　　Step Into Instruction command+option+shift+i　　Step Over command+shift+o　　Setp Over Instruction command+option+shift+o　　Setp Out command+shift+t　　Next Thread command+option+control+上箭头
+　　Previous Thread command+option+control+下箭头
+　　Sync with Debugger 可设
+　　Stop on Debugger()/DebugStr() 可设
+　　Enable Guard Malloc 可设
+
+　　Desing相关：
+　　=============Class Model==============
+　　Quick Model　　Go to Declaration　　Go to Definition　　Go to Documentation　　Add Comment
+
+　　Window相关：
+　　最小化 command+m　　全部最小化 command+option+m　　Zoom　　Bring All to Front　　Defaults　　Organizer command+control+o　　Activity
+
+　　Help相关：
+　　开发文档 command+option+?　　快速帮助 command+control+?　　Xcode帮助 command+?　　Welcome to Xcode　　Xcode Quick Start　　Xcode Release Notes　　Find Documentation for Selected Text　　Open man Page
+　command+shift+d 打开头文件
+
+熟悉Xcode的常用快捷键，可以更快的调整代码的版式，功能。尤其是几个常用的快捷键，更应该是编码必用啊。特整理如下：
+command相当于win键；
+
+control相当于Ctrl键；
+
+option相当于Alt键；
+
+//排版快捷键
+
+command + [                     左移选中的代码
+
+command + ]                     右移选中的代码
+
+右键菜单，选择 Structure-->re-indent,会自动格式化代码
+
+折叠代码（即收缩代码，相当于VS的-号），点击代码左边的焦点列，就可以进行代码的折叠。
+
+添加可读的标记                在代码中加入#pragma mark
+tab                                       空白
+
+Esc                                      打开自动完成列表(E表示枚举类型，f表示函数，＃表示＃define宏，m表示方法，C表示类)
+
+control ＋ .                          不显示自动完成列表而自动进行推荐值正向循环
+
+shift + control + .                 不显示自动完成列表而自动进行推荐值反向循环
+
+control + /                            移至下一个占位符
+
+command + shift + D            打开文件快速查找对话框
+
+command + option + 向上箭头     查看文件的配套文件（如果当前查看的为 m 文件，则打开 h 文件，反之亦然）
+
+command + S                     保存当前文件
+
+command + C                     Copy
+
+command + X                      剪切
+
+command + V                      粘贴
+
+command + B                      Build，编译
+
+command + R                      Run，运行
+
+command + F                      文件内搜索
+
+按住 option 键并双击选择的内容，可以查找选中字符的文档帮助；
+
+F5                                         执行到下一个断点（Pause/Continue）
+
+F6                                         执行到下一步(Step Over)
+
+F7                                         跳入函数执行(Step Into)
+
+F8                                         跳出函数执行(Step Out)
+
+control + F                           Forword右移光标一个字符
+control + B                           Back左移光标一个字符
+
+control + P                           Previous lien 上移光标
+
+control + N                           Next line 下移光标
+
+control + A                           Line head 移至行头    
+
+control + E                           Line end 移至行尾
+
+control + T                           Transpose 交换光标两边的符合
+
+control + D                           Delete 删除光标右边的字符
+
+control + K                           Kill 删除光标所在行中光标后的代码，
+
+control + L                           将插入点置于窗口正中。
+
+另外，左键点击左上角XCode--》Preferences--》Key Bindings，你可以按照自己的喜好，自定义这些快捷键。快捷键是提升效率的方式之一，还是挺重要的一件事的。
+
+[图文解释XCode常用快捷键的使用](http://blog.csdn.net/totogo2010/article/details/7640612)
+分类： [iOS开发经验技巧](http://blog.csdn.net/totogo2010/article/category/1159514)2012-06-07 10:21 28476人阅读 [评论](http://blog.csdn.net/totogo2010/article/details/7640612#comments)(8) 收藏 [举报](http://blog.csdn.net/totogo2010/article/details/7640612#report)
+刚开始用Xcode是不是发现以前熟悉的开发环境的快捷键都不能用了？怎么快捷运行，停止，编辑等等、都不一样了。快速的掌握这些快捷键，能提供开发的效率。
+
+其实快捷键在Xcode的工具栏里都标注有，只是有的符号和你的键盘上的符号对应不起来罢了。下面截图工具栏里的快捷键总结一下常用快捷键的用法。
+一、关于运行调试
+
+1、运行，停止，都在工具栏的Product里。
+
+Command + R  运行。
+
+Command + .  停止
+
+![](http://upload-images.jianshu.io/upload_images/1336268-97450c76edd1be5b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+2、F6单步调试、F7跳入，F8继续， 和Eclipse,VS类似
+
+![](http://upload-images.jianshu.io/upload_images/1336268-f772d296a1e30c51.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+二、导航
+
+这是导航里的快捷键
+
+![](http://upload-images.jianshu.io/upload_images/1336268-db426480b6018c35.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+到这里要解释一下，有的同学可能不知道里面的符号代表什么，那个花键大家都知道，是command键，其他的几个键那，怎么在键盘上找不到呢？不着急，看图：
+
+![](http://upload-images.jianshu.io/upload_images/1336268-b627eef98b3af73e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+其实分别是咱们常用的option 、control、shift键。
+
+1、切换头文件和m.文件，很实用
+Command + control+ 上下箭头键
+2、go back，回退，干嘛用啊，就是回到你上次打开的页面。
+
+control+command+ 左箭头
+
+go forward 回到你前面打开的页面
+
+control+command+ 右箭头
+
+三、文件  File
+
+新建项目 command+shift+n
+新建文件 command+n
+新建空文件 command+control+n
+打开 command+o
+关闭窗口 command+w
+保存所有文件 command+option+s
+还原到保存时状态 command+u
+
+四、编辑代码
+1、代码缩进
+左缩进 command+[
+右缩进 command+]
+2、代码编辑
+control-F: 向右一个字符（forward）
+control-B: 向左一个字符（backward）
+control-P: 前一行（previous）
+control-N: 后一行（next）
+control-A: 去行首
+control-E: 到行尾（end）
+control-T: 调换光标两边的字符（transpose）
+control-D: 删除光标右侧字符（delete）
+control-K: 删除本行剩余的字符（kill）
+3、文档内搜索
+Command + F: 搜索
+Command + G: 搜索下一处
+Shift + Command + G: 搜索上一处
+
+//Xcode相关
+/Users/iamnowhere/Library/Application Support/iPhone Simulator/ 
+
+Control + Cmd+ 空格键  字符显示程序的快捷键应该是  
+command + Q           退出一个软件
+command  +tab        页面切换
+command +shift + 4         截屏到桌面
+command+z   撤销
+command+shift+z 重复
+command+x 剪切
+command+c 复制
+command+v 粘贴
+command+option+shift+v  粘贴并匹配格式
+command+a 全选
+
+command      相当于win键；
+control     相当于Ctrl键；
+option     相当于Alt键；     
+
+1.删除光标后面的内容
+fn + delete
+
+6.更改图标位置
+command + 图标
+
+9.调整倍增量
+shift + option  1/4
+
+10.快速归类 新建智能文件夹
+选中多个文件
+shift + option + N
+
+11.快速关机 不弹出询问对话框
+option + 关机
+
+12.显示方式
+command + F1/F2/F3/F4  “图标”/“列表”/“分栏”/“Cover Flow” 4种视图
+
+18.快速切换输入法
+option + 空格
+
+19.快速全屏预览图像
+option + 空格 
+
+20.删除所有系统日志
+sudo rm -rf /private/var/log/*
+
+23.清除缓存文件
+cd~/Library/Caches/rm -rf ~/Library/Caches/*
+
+常用高频的快捷键目录：
+上网：浏览器操作（Safari & Chrome）
+邮件：Mac Mail
+全局：Finder操作，窗口大小调整，“神奇翻译”（需用到Alfred的收费Workflow）
+截屏：电脑截屏和手机截屏
+
+浏览器上网 (Safari & Chrome)
+Command + T = 这是基本全局打开新标签的标准键。会用的很多。
+
+新标签默认是在地址框输入，所以我通常是CT了之后直接输入要搜索的东西。
+
+Command + L = 光标移到地址框
+
+Command + R = 刷新页面
+
+Command + + = 大屏幕的时候很实用，放大页面，基本也是全局型的。 0是恢复默认大小
+
+Command + W = 关闭当前标签。不要和退出按错了。
+
+Command + Q = 退出当前软件，其他软件也都可以用。
+
+Command + D = 收藏当前页面
+
+空格 = 屏幕下滚一页
+
+Safari的恢复刚关闭标签就是熟悉的 Command + Z。
+
+Chrome是和打开差不多的，Command + Shift + T。Chrome这个功能更强大，就是可以按顺序恢复，但是Safari只能恢复最近的一个。
+
+这个功能我一直用，经常手抖关闭的一瞬间发现有用。
+
+好了，常用的记到这里就够了。
+
+下面介绍Chrome上面的一个插件Vimium。需要要在Chrome的商店下载，应该也可以通过别的方法找到。地址
+
+很多程序员都熟悉的Vim，我之前也介绍和练过
+
+高效学习（一）互动篇：编程Vim正则表达式和英语
+
+但是因为确实写不到那么多代码（我用xcode最多的键是Tab，因为可以自动补齐输入…），所以不管怎么练都记不住。而且如果用Vim当文本编辑器，如果是英语还好，如果是中文，输入法切换和快捷键总是冲突，很难受，还不如用Markdown方便，下面会说到。
+
+好了，Vimium就是用Vim的快捷键操作浏览器。这就很贴近群众了。需要记住几个不太正常的键，但是好处是比自带的快捷键更简单，因为大多只要一个按钮即可，不用组合键（有没有找到黑莓的感脚）。列几个我最近常用的
+
+Shift + J / K = 这两个是用来在标签之前切换的，前后不同顺序。这个我最需要了，默认的切换很麻烦，组合不好按，但是其实切换有很常用。
+
+PS:说明下，这个插件是区分大小写的，我标注Shift其实就是需要大写的意思。这样大家可以知道那些用组合哪些不用。
+
+Shift + H / L = 后退和前进，就是通常在浏览器左上角那两个箭头。这个功能也比较常用。
+
+还有几个单键操作和默认操作差不多，更简单了比如：
+
+x = 关闭当前标签
+Shift + X = 恢复刚关闭的标签
+
+t = 打开新标签
+d,u = 也是上下翻页，下翻页还是空格好用。上翻页还比较实用。
+
+jkhl ＝ 就是vim的标准移动按键，用来移动浏览器内内容，不太方便。
+
+下面有几个看起来不太会用到，但是其实还挺有用的：
+
+gg = 返回页面顶部。就相当于按iOS最上面时间那里是可以快速返回任何页面顶部的（你不会不知道吧）
+
+Shift + G = 到页面底部
+
+关于f有两个很有意思的用法：
+
+单击f会出现满屏的提示，继续按对应的字母就当于点击相应的连接了。可以开页面的就是新标签页打开。
+
+ff+对应字母打开新标签连接
+
+我初看感觉这个好蛋疼啊，满屏找我要点的连接？其实用起来很好用，因为你眼睛一定是看着你要点的地方的，然后一下就会看到提示，手自然就按下去了，实际操作是很流畅的。
+
+fu = 进入父级页面。比如在国际足球-新浪体育，就会回到新浪体育。（唉果然还是用我们新浪体育举例啊）
+
+就这些上网基本就够用了，不用硬记，需要的时候看一眼，看几次就记住了。
+
+邮件（Mac mail）
+
+我一度从公司配的Office Outlook换回到Mac自带的Mail，就是因为用惯了这几个快捷键，但是mail的键很古怪，经常两个辅助键一起，其实不是很方便，我也懒得自己调了，就这么用也还可以吧。
+
+常用的：
+
+Command + Shift + n = 手动刷新邮箱查看新邮件。iOS的通知会快一些，这时候就手动刷下可以看到新邮件。
+
+Command + n = 新建邮件
+
+Command + Shift + r = 回复当前邮件
+
+Command + Shift + f = 转发当前邮件
+
+Command + Shift + d = 发送邮件
+
+其实这就够了，tab切换一下输入框，基本上邮件够用了。如果想看更多，除了自己查之外，其实大部分软件都会把相关的快捷键标到菜单上，对照一看就知道了。
+
+查看自带的快捷键
+
+全局（Finder，Alfred，窗口调整）
+
+文件夹和软件相关的几个操作。
+
+Mac的Finder有四种浏览方式，可以针对不同文件夹指定不同的方式。图片多就用分屏预览，或者缩略图（调大小用Command + +/-）。
+
+这几个浏览方式用Command + 1/2/3/4切换。
+
+另外说两个实用的，Download文件夹可以用这个按类型分类，这样就会更清晰找到东西。另一个就是活用智能文件夹和侧边栏也是很方便的功能。
+
+分类查看
+
+打开软件，算数和简单翻译，用Alfred。
+
+坦白说，用Alfred做这三件事真的是有点暴殄天物的感觉。大家随便搜就知道这个黑帽子搜索框有多强大。
+
+神兵利器——Alfred
+但是我最常用的真的就是这三个，但是每天用很多次，Option + 空格就是给他的。其中前两个是免费功能，简单说下：
+
+直接输入软件名字就可以快速打开或者预览。
+
+Find / open + 文件名 可以打开文件夹，打开文件，预览文件。
+
+直接输入数字和运算符就可以算数
+
+算数
+
+最后一个是我最近每天都得用很多很多次的功能，虽然是在收费的Powerpack里面，需要用Workflow，但是真的很有用！
+
+“神奇翻译”
+
+就是输入 “te”然后空格后面加 任何语言 ＝ 翻译成英语。“tc”空格后面加 任何语言 ＝ 翻译好的中文。然后只需要再按一下回车，就存到剪切板了！
+
+有没有很神奇！不管你在干什么用什么软件，option + 空格唤起，te 空格 输入要翻译的东西，回车，直接粘贴！（Alfred还可以调整唤起时的输入法，也就是你连切换输入法的快捷键都可以省去了！）
+
+当然这是我用一个国外的Workflow改了一下，他用的google翻译，有个不好的地方就是单词只出来一个，如果不是你要的那个意思，就得打开页面重新来了，但是通常我就是回忆下拼写......
+
+国外这个是不带中文的，我把法语那个改成中文了，这
+
+DESTINATION_LANGUAGE="zh-CN"
+
+修改自定义语言
+
+改了就好了。
+
+调整窗口位置和大小
+
+SizeUP
+
+就是用快捷键给不同的窗口移动的不同的区域，同时可以调整或自定义大小去。非常适合大屏幕和多窗口切换杂乱的时候，整理很轻快，效率提高很多很多。最关键的是，免费的。你如果不买Licence的话就是偶尔弹个窗提醒你而已，不影响使用次数和期限，非常良心！
+
+下载地址
+
+文本输入 (Markdown)
+
+关于文本输入，如果常用输入的话，建议好好看下Markdown语法，是一种输入型的标记语句，大家随便搜就可以搜到很多，不再赘述了。反正就是可以方便的不用再Word里调字体大小什么的，专注输入了。
+
+这个不光是程序员用的，只要是写字多都可以用，包括微信后台格式编辑都有帮助。
+
+Markdown——入门指南
+献给写作者的 Markdown 新手指南
+
+截屏 默认的很简单 
+Command + 3/4 ＝ 3是全屏，4是分区。
+
+但是还是下载一个Snip地址 更好用，不但可以自动选择某个窗口截屏，还可以选择存到文件还是只保存在剪切板里，自定义名称大小格式，如果是官网下载的还可以滚动完整网页。我现在CTRL + 空格就是给这个软件的。
+
+对了，说到截屏，这只是截电脑的屏。之所以把截屏单拿出来说是因为我最近发现了一个
+
+更简单更方便可以截手机屏的方法
+
+之前我手机截好用QQ或者微信发给自己，甚至发邮件。后来我用DeskConnect
+DeskConnect-真正的实现快速简单在Mac和iOS传文件
+但DC一次传一张还是很麻烦。用Dropbox更麻烦，有的时候截很多，而且还是一会截一批，一会截一批，截下来的分辨率很大，还得用automator自动转大小（这是另外一个自动化的故事了），还有如果是别人的手机呢，你不能用人家的微信QQ吧（况且我同事都没有！）
+
+而我居然一次性解决这些所有问题，那就是转变思路。传输图片很麻烦对吧，那我就压根不传了。直接把手机或者平板Air Play到mac上，然后用snip截！
+
+Air Play投影
+
+手机投影效果
+
+哈哈 不但可以调整窗口大小，还可以随时操作随时截屏，我用这个X-Mirage还可以录屏。屌炸了全解决！目前唯一的小问题就是我不能一直开着X-Mirage因为会有同事在会议室投影的时候不小心连过来...
+
+而且这个软件是我在一次免费注册活动里得的，没花钱，如果你觉得不错你可以买。或者还有类似的AirServer，Refletor，都是收费的，如果你觉得这种方式能提升的效率超出这个价值就买吧。不然还是有很多其他解决方案的。
+
+理科背景，社科专业，文科情怀，工科挚爱
